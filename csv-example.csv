@@ -1,0 +1,17 @@
+https://www.example.com/
+http://example.com
+https://www.example.com/abc/
+https://example.com:80
+https://example.com/abc/?q=1&p=2
+https://example.com/bca/?p=2&q=1
+http://www.example.com/
+https://example.com
+https://www.example.net/
+https://www.example.net/test
+https://www.example.net/test/2
+https://www.example.net:80/test/2
+http://www.example.net:80/test/2
+https://www.example.net:80/test/4
+https://www.example.com/test/55555/?id=a
+https://www.example.com/test/55555/?id=v
+https://www.example.com/test/55555/?id=c

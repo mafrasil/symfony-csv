@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<section class="container mx-auto py-24 flex">
+    <div class="w-8/12 pr-12">
+        <table>
+                {% for url in urls %}
+                <tr>
+                    <td class="w-10">{{ url.id }}</td>
+                    <td class="pr-20">{{ url.url }}</td>
+                    <td>{{ url.urlhash|slice(0, 23) }}...</td>
+                </tr>
+                {% endfor %}
+        </table>
+    </div>
+    <div class="w-4/12 bg-gray-100 rounded-md p-4">
+        {% if app.session.flashBag.has('success') %}
+            <div class="bg-green-500 text-white p-4 rounded-sm mb-4">
+                {% for message in app.session.flashBag.get('success') %}
+                    {{ message }}
+                {% endfor %}
+            </div>
+        {% endif %}
+        {{ form_start(form) }}
+            {{ form_widget(form) }}
+            <button class="bg-black text-white py-2 px-6 rounded-sm mt-4" type="submit">Import</button>
+        {{ form_end(form) }}
+    </div>
+</section>
+{% endblock %}
